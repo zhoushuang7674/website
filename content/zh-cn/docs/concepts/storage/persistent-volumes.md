@@ -1642,14 +1642,14 @@ in your cluster. In this case, the new PVC creates as you defined it, and the
 
 <!--
 When a default StorageClass becomes available, the control plane identifies any
-existing PVCs without `storageClassName`. For the PVCs that either have an empty
-value for `storageClassName` or do not have this key, the control plane then
-updates those PVCs to set `storageClassName` to match the new default StorageClass.
+existing PVCs without `storageClassName`. For the PVCs without the primary key
+'storageClassName', the control plane then updates those PVCs to set `storageClassName`
+to match the new default StorageClass.
 If you have an existing PVC where the `storageClassName` is `""`, and you configure
 a default StorageClass, then this PVC will not get updated.
 -->
 当一个默认的 StorageClass 变得可用时，控制平面会识别所有未设置 `storageClassName`
-的现有 PVC。对于 `storageClassName` 为空值或没有此主键的 PVC，
+的现有 PVC。对于没有 `storageClassName` 此主键的 PVC，
 控制平面会更新这些 PVC 以设置其 `storageClassName` 与新的默认 StorageClass 匹配。
 如果你有一个现有的 PVC，其中 `storageClassName` 是 `""`，
 并且你配置了默认 StorageClass，则此 PVC 将不会得到更新。
